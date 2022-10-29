@@ -1,4 +1,4 @@
-package tech.sherrao.wlu.androidproject;
+package tech.sherrao.wlu.localify;
 
 import android.content.Context;
 
