@@ -5,7 +5,18 @@
     android:id="@+id/loadingLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".LoadingActivity">
+
+    <ImageView
+        android:id="@+id/loadingImage"
+        android:layout_width="212dp"
+        android:layout_height="204dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/full_logo" />
 
     <ProgressBar
         android:id="@+id/loadingProgressBar"
@@ -18,15 +29,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/loadingImage"
         app:layout_constraintVertical_bias=".85" />
-
-    <ImageView
-        android:id="@+id/loadingImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/full_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

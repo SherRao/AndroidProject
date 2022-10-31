@@ -1,8 +1,12 @@
 package tech.sherrao.wlu.localify;
 
-import androidx.fragment.app.FragmentActivity;
-
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -15,19 +19,19 @@ import tech.sherrao.wlu.localify.databinding.ActivityMapsBinding;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
+    private static final float DEFAULT_ZOOM_LEVEL = 13f;
+
+    private GoogleMap map;
     private ActivityMapsBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMapsBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        binding = ActivityMapsBinding.inflate(super.getLayoutInflater());
+        super.setContentView(binding.getRoot());
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         assert mapFragment != null;
         mapFragment.getMapAsync(this);
     }
@@ -42,12 +46,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * installed Google Play services and returned to the app.
      */
     @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+    public void onMapReady(GoogleMap map) {
+        this.map = map;
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng loc = getLastBestKnownLocation();
+        map.addMarker(new MarkerOptions().position(loc).title("Your location"));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(loc, DEFAULT_ZOOM_LEVEL));
+    }
+
+    @SuppressLint({"InlinedApi", "MissingPermission"})
+    private LatLng getLastBestKnownLocation() {
+        LocationManager locationManager = (LocationManager) super.getSystemService(Context.LOCATION_SERVICE);
+        Location loc = locationManager.getLastKnownLocation(LocationManager.FUSED_PROVIDER);
+        return new LatLng(loc.getLatitude(), loc.getLongitude());
     }
 }

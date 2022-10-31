@@ -7,6 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".FirstTimeActivity">
 
+    <TextView
+        android:id="@+id/firstTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin convallis volutpat ipsum eu sodales?"
+        app:layout_constraintBottom_toTopOf="@+id/firstTimeDropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Spinner
         android:id="@+id/firstTimeDropdown"
         android:layout_width="wrap_content"
@@ -27,4 +38,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstTimeDropdown"
         app:layout_constraintVertical_bias="0.0" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

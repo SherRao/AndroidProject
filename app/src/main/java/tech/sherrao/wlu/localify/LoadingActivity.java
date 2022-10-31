@@ -11,7 +11,6 @@ public class LoadingActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_loading);
-
         new Handler().postDelayed(() -> startActivity(new Intent(LoadingActivity.this, FirstTimeActivity.class)), 2000);
     }
 }

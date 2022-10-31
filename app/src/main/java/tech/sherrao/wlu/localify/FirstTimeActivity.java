@@ -12,6 +12,9 @@ import android.widget.Spinner;
 
 public class FirstTimeActivity extends AppCompatActivity {
 
+    private final String SHARED_PREFS_NAME = "tech.sherrao.wlu.localify";
+    private final String SHARED_PREFS_ORIGINS_KEY = SHARED_PREFS_NAME + ".origin";
+    private static final String[] ORIGINS = new String[] {"Russian", "Middle-Eastern", "Indian", "Chinese"};
     private SharedPreferences prefs;
 
     @Override
@@ -19,20 +22,20 @@ public class FirstTimeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_first_time);
 
-        prefs = super.getSharedPreferences("tech.sherrao.wlu.localify", Context.MODE_PRIVATE);
+        prefs = super.getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE);
         checkIfFirstTime();
         updateComponents();
     }
 
     private void checkIfFirstTime() {
-        String originLang = prefs.getString("tech.sherrao.wlu.localify.origin", null);
+        String originLang = prefs.getString(SHARED_PREFS_ORIGINS_KEY, null);
         if(originLang != null)
             super.startActivity(new Intent(FirstTimeActivity.this, MapsActivity.class));
     }
 
     private void updateComponents() {
         Spinner spinner = super.findViewById(R.id.firstTimeDropdown);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, new String[] {"EN", "US"});
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, ORIGINS);
         spinner.setAdapter(adapter);
 
         Button button = super.findViewById(R.id.firstTimeButton);
