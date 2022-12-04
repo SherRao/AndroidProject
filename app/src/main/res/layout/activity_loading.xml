@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/full_logo" />
+        app:srcCompat="@drawable/full_logo_trans" />
 
     <ProgressBar
         android:id="@+id/loadingProgressBar"
