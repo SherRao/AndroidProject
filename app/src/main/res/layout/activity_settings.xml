@@ -19,7 +19,7 @@
 
     <EditText
         android:id="@+id/settingsFirstNameEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
@@ -34,44 +34,44 @@
 
     <EditText
         android:id="@+id/settingsLastNameEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:hint="Last Name"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/settingsEmailEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settingsFirstNameEditText"
-        tools:ignore="TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/settingsEmailEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:hint="Email"
+        android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/settingsPhoneNumberEditText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settingsLastNameEditText"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/settingsLastNameEditText" />
 
     <EditText
         android:id="@+id/settingsPhoneNumberEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:hint="Phone Number"
+        android:importantForAutofill="no"
         android:inputType="phone"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/settingsCountryDropDown"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settingsEmailEditText"
-        tools:ignore="TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TextContrastCheck" />
 
     <Switch
         android:id="@+id/settingsChangesSwitch"

@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +28,8 @@ public class SettingsActivity extends AppCompatActivity {
     private SharedPreferences prefs;
 
     private static final String[] ORIGINS = new String[] {"Russian", "Middle-Eastern", "Indian", "Chinese"};
+    ArrayAdapter<String> adapter;
+
     private EditText firstName;
     private EditText lastName;
     private EditText email;
@@ -43,12 +46,15 @@ public class SettingsActivity extends AppCompatActivity {
         tech.sherrao.wlu.localify.databinding.ActivitySettingsBinding binding = ActivitySettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, ORIGINS);
+
         firstName = findViewById(R.id.settingsFirstNameEditText);
         lastName = findViewById(R.id.settingsLastNameEditText);
         email = findViewById(R.id.settingsEmailEditText);
         phoneNumber = findViewById(R.id.settingsPhoneNumberEditText);
         makeChanges = findViewById(R.id.settingsChangesSwitch);
         country = findViewById(R.id.settingsCountryDropDown);
+        country.setAdapter(adapter);
         save = findViewById(R.id.settingsSaveButton);
 
         prefs = super.getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE);
@@ -67,17 +73,12 @@ public class SettingsActivity extends AppCompatActivity {
         String origin = prefs.getString(SHARED_PREFS_ORIGINS_KEY, null);
         if(origin != null)
         {
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, ORIGINS);
             country.setSelection(adapter.getPosition((origin)));
         }
     }
 
     private void updateComponents()
     {
-        //Add origins to spinner dropdown
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, ORIGINS);
-        country.setAdapter(adapter);
-
         //Disable until switch is activated
         firstName.setEnabled(false);
         lastName.setEnabled(false);
