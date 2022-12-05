@@ -14,7 +14,7 @@ public class FirstTimeActivity extends AppCompatActivity {
 
     private final String SHARED_PREFS_NAME = "tech.sherrao.wlu.localify";
     private final String SHARED_PREFS_ORIGINS_KEY = SHARED_PREFS_NAME + ".origin";
-    private static final String[] ORIGINS = new String[] {"Russian", "Middle-Eastern", "Indian", "Chinese"};
+    private static final String[] ORIGINS = new String[] {"Middle-Eastern", "Indian", "Chinese"};
     private SharedPreferences prefs;
 
     @Override
@@ -30,7 +30,7 @@ public class FirstTimeActivity extends AppCompatActivity {
     private void checkIfFirstTime() {
         String originLang = prefs.getString(SHARED_PREFS_ORIGINS_KEY, null);
         if(originLang != null)
-            super.startActivity(new Intent(FirstTimeActivity.this, MapsActivity.class));
+            super.startActivity(new Intent(FirstTimeActivity.this, MainActivity.class));
     }
 
     private void updateComponents() {
@@ -45,7 +45,7 @@ public class FirstTimeActivity extends AppCompatActivity {
             editor.putString("tech.sherrao.wlu.localify.origin", origin);
             editor.apply();
 
-            startActivity(new Intent(FirstTimeActivity.this, MapsActivity.class));
+            startActivity(new Intent(FirstTimeActivity.this, MainActivity.class));
         });
     }
 }
