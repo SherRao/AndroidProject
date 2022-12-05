@@ -10,4 +10,47 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+<!--    HelperActivity Strings-->
+    <string name="instructions">Instructions</string>
+    <string name="dialogButton">App Information</string>
+    <string name="localifyGoal">
+        Newly landed immigrants are supported by the government, however, many can still face issues in a unfamiliar country. Some of these struggles include financial struggles, as well locating places specific to their culture.
+    </string>
+    <string name="spaceCreator">
+
+    </string>
+    <string name="localifyGoal2">
+        Whether it be restaurants or grocery stores that sell food/ingredients related to their culture, or thrift stores, providing budget options for clothing, Localify looks to help newly landed immigrants find important services and communal places in their area.
+    </string>
+<!--
+        As a newly landed immigrant, it can be hard to locate stores that serve food or sell ingredients specific to their culture.
+-->
+        <!--App Info strings-->
+    <string name="dialogContinue">Continue</string>
+    <string name="dialogTitle">User Information</string>
+    <string name="authors">Author\'s:</string>
+    <string name="gavan">Gavan Singh</string>
+    <string name="nahor">Nahor Yirgaalem</string>
+    <string name="nausher">Nausher Rao</string>
+    <string name="ryan">Ryan Yee</string>
+    <string name="actvitiyVersion">Activity Version: 1.0.01!</string>
+    <!--    <string name="authorNames">-->
+    <!--        -->
+    <!--        Gavan Singh-->
+
+    <!--        Nahor Yirgaalem-->
+
+    <!--        Nausher Rao-->
+
+    <!--        Ryan Yee-->
+    <!--    </string>-->
+
+<!--    Instructions Dialog Strings -->
+    <string name='howToUse'>How To Use Localify</string>
+    <string name="appInstructions">
+        To use Localify, begin by selecting your ethnicity. then you can go ahead and suck your dukes
+    </string>
+
+
 </resources>
