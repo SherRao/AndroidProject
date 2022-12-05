@@ -42,7 +42,7 @@ public class FirstTimeActivity extends AppCompatActivity {
         button.setOnClickListener((view) -> {
             String origin = adapter.getItem(spinner.getSelectedItemPosition());
             SharedPreferences.Editor editor = prefs.edit();
-            editor.putString("tech.sherrao.wlu.localify.origin", origin);
+            editor.putString(SHARED_PREFS_ORIGINS_KEY, origin);
             editor.apply();
 
             startActivity(new Intent(FirstTimeActivity.this, MainActivity.class));

@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:id="@+id/instructionsLayout"
     android:layout_width="370dp"
-    android:layout_height="550dp">
+    android:layout_height="550dp"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/howToUse"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginBottom="16dp"
-        android:paddingTop="10dp"
+        android:background="@color/blue"
         android:paddingLeft="-10dp"
+        android:paddingTop="10dp"
         android:paddingBottom="20dp"
         android:text="@string/howToUse"
-        android:textColor="@color/black"
-        android:textSize="30dp"
         android:textAlignment="center"
-        android:background="@color/blue"/>
+        android:textColor="@color/black"
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/instructionsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="@string/appInstructions"
-        android:textSize="15dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="1dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/appInstructions"
+        android:textSize="15dp" />
 
     <Button
         android:id="@+id/quitInstructionsButton"

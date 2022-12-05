@@ -2,33 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/helpLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/helpImage"
         android:layout_width="232dp"
         android:layout_height="183dp"
         app:srcCompat="@drawable/logo_trans" />
 
     <TextView
+        android:id="@+id/helpText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:paddingStart="20dp"
         android:paddingEnd="10dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/localifyGoal"/>
+        android:text="@string/localifyGoal" />
+
     <TextView
+        android:id="@+id/helpText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="5dp"
         android:paddingStart="20dp"
+        android:paddingTop="5dp"
         android:paddingEnd="10dp"
         android:paddingBottom="50dp"
-        android:text="@string/localifyGoal2"/>
+        android:text="@string/localifyGoal2" />
+
     <Button
         android:id="@+id/appInfoButton"
         android:layout_width="wrap_content"
@@ -51,8 +56,7 @@
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:text="@string/instructions"
-        android:textColor="@color/black"/>
-
+        android:textColor="@color/black" />
 
 
 </LinearLayout>

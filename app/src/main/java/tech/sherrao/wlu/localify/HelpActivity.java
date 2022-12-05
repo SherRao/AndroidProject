@@ -13,28 +13,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class HelpActivity extends AppCompatActivity {
-    Button appInfoButton, instructionsButton;
+
+    private Button appInfoButton;
+    private Button instructionsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_help);
-        appInfoButton = findViewById(R.id.appInfoButton);
+        appInfoButton = super.findViewById(R.id.appInfoButton);
 
-        appInfoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                displayAppInfo();
-            }
-        });
+        appInfoButton.setOnClickListener(view -> displayAppInfo());
 
-        instructionsButton = findViewById(R.id.instructionsButton);
-        instructionsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayInstructions();
-            }
-        });
+        instructionsButton = super.findViewById(R.id.instructionsButton);
+        instructionsButton.setOnClickListener(v -> displayInstructions());
 
 
     }
@@ -45,14 +37,7 @@ public class HelpActivity extends AppCompatActivity {
         dialog.setContentView(R.layout.app_info_toolbar);
 
         Button dialogButton = dialog.findViewById(R.id.quitAppInfoButton);
-
-        dialogButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
+        dialogButton.setOnClickListener(v -> dialog.dismiss());
         dialog.show();
     }
 
@@ -63,14 +48,7 @@ public class HelpActivity extends AppCompatActivity {
 
         Button dialogButton = dialog.findViewById(R.id.quitInstructionsButton);
 
-        dialogButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
+        dialogButton.setOnClickListener(v -> dialog.dismiss());
         dialog.show();
-
     }
 }
