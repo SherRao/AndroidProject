@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import tech.sherrao.wlu.localify.misc.Location;
+
 public class LocationAdapter extends RecyclerView.Adapter<LocationAdapter.MyViewHolder> {
     Context context;
     ArrayList<Location> locations;

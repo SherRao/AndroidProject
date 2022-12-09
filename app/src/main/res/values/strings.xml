@@ -11,7 +11,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_maps">MapsActivity</string>
 
-<!--    HelperActivity Strings-->
+    <!--    HelperActivity Strings-->
     <string name="instructions">Instructions</string>
     <string name="dialogButton">App Information</string>
     <string name="localifyGoal">
@@ -23,10 +23,10 @@
     <string name="localifyGoal2">
         Whether it be restaurants or grocery stores that sell food/ingredients related to their culture, or thrift stores, providing budget options for clothing, Localify looks to help newly landed immigrants find important services and communal places in their area.
     </string>
-<!--
+    <!--
         As a newly landed immigrant, it can be hard to locate stores that serve food or sell ingredients specific to their culture.
 -->
-        <!--App Info strings-->
+    <!--App Info strings-->
     <string name="dialogContinue">Continue</string>
     <string name="dialogTitle">User Information</string>
     <string name="authors">Author\'s:</string>
@@ -46,11 +46,16 @@
     <!--        Ryan Yee-->
     <!--    </string>-->
 
-<!--    Instructions Dialog Strings -->
+    <!--    Instructions Dialog Strings -->
     <string name='howToUse'>How To Use Localify</string>
     <string name="appInstructions">
         To use Localify, begin by selecting your ethnicity. then you can go ahead and suck your dukes
     </string>
+    <string name="title_activity_nav">NavActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_toolbar">ToolbarActivity</string>
 
 
 </resources>

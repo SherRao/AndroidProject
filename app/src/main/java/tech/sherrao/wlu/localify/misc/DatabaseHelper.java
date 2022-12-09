@@ -1,4 +1,4 @@
-package tech.sherrao.wlu.localify;
+package tech.sherrao.wlu.localify.misc;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -49,7 +49,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         this.onCreate(db);
     }
 
-    public void saveFavourite(String id, String name, float latitude, float longitude, float rating) {
+    public void saveFavourite(Location loc) {
+        this.saveFavourite(loc.id, loc.name, loc.latLong.latitude, loc.latLong.longitude, loc.rating);
+    }
+
+    public void saveFavourite(String id, String name, double latitude, double longitude, double rating) {
         ContentValues values = new ContentValues();
         values.put(ID_COLUMN, id);
         values.put(NAME_COLUMN, name);
@@ -71,9 +75,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         while(!cursor.isAfterLast()) {
             String id = cursor.getString(cursor.getColumnIndex(ID_COLUMN));
             String name = cursor.getString(cursor.getColumnIndex(NAME_COLUMN));
-            float latitude = cursor.getFloat(cursor.getColumnIndex(LAT_COLUMN));
-            float longitude = cursor.getFloat(cursor.getColumnIndex(LONG_COLUMN));
-            float rating = cursor.getFloat(cursor.getColumnIndex(RATING_COLUMN));
+            double latitude = cursor.getDouble(cursor.getColumnIndex(LAT_COLUMN));
+            double longitude = cursor.getDouble(cursor.getColumnIndex(LONG_COLUMN));
+            double rating = cursor.getDouble(cursor.getColumnIndex(RATING_COLUMN));
 
             result.add(new Location(id, name, latitude, longitude, rating));
             cursor.moveToNext();
