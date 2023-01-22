@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    HelperActivity Strings-->
+    <string name="instructions">Treoracha</string>
+    <string name="dialogButton">Eolas App</string>
+    <string name="localifyGoal">
+    Tacaíonn an rialtas le hinimircigh a tugadh i dtír le déanaí, ach is féidir le go leor aghaidh a thabhairt ar cheisteanna fós i dtír nach bhfuil taithí acu orthu. I measc cuid de na streachailtí seo tá streachailtí airgeadais, chomh maith le háiteanna a bhaineann go sonrach lena gcultúr a aimsiú.
+    </string>
+    <string name="spaceCreator">
+
+</string>
+    <string name="localifyGoal2">
+    Cibé an bialanna nó siopaí grósaeireachta iad a dhíolann bia/comhábhair a bhaineann lena gcultúr, nó siopaí rabhán, a sholáthraíonn roghanna buiséid d’éadaí, féachann Localify le cabhrú le hinimircigh nuathionscanta seirbhísí tábhachtacha agus áiteanna pobail a aimsiú ina gceantar.
+</string>
+
+    <!--App Info strings-->
+    <string name="dialogContinue">Leanúint ar aghaidh</string>
+    <string name="dialogTitle">Eolas Úsáideoir</string>
+    <string name="authors">Údar:</string>
+    <string name="gavan">Gavan Singh</string>
+    <string name="nahor">Nahor Yirgaalem</string>
+    <string name="nausher">Nausher Rao</string>
+    <string name="ryan">Ryan Yee</string>
+    <string name="actvitiyVersion">Activity Version: 1.0.01!</string>
+
+    <!--    Instructions Dialog Strings -->
+    <string name='howToUse'>Conas Localify a Úsáid</string>
+    <string name="appInstructions">
+    Chun Localify a úsáid, cuir tús le do\neitneachas a roghnú. Ansin, is féidir leat dul ar aghaidh agus\nbrabhsáil láithreacha in aice láimhe a mheaitseálann do\neitneachas. Chun suíomh a chur leis na cinn is ansa leat,\nroghnaigh an marcóir gaolmhar, agus\ntapáil an cnaipe móide.
+    </string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">An Chéad Bhroinn</string>
+    <string name="second_fragment_label">Dara Fragment</string>
+    <string name="next">Ar aghaidh</string>
+    <string name="previous">Roimhe Seo</string>
+    <string name="firstTimeTextLabel">Fáilte romhat! Roghnaigh do eitneachas/bunús le tosú!</string>
+    <string name="okContinue">Leanúint ar aghaidh</string>
+</resources>

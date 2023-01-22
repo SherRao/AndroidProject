@@ -14,21 +14,16 @@ import android.widget.TextView;
 
 public class HelpActivity extends AppCompatActivity {
 
-    private Button appInfoButton;
-    private Button instructionsButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_help);
-        appInfoButton = super.findViewById(R.id.appInfoButton);
+        Button appInfoButton = super.findViewById(R.id.appInfoButton);
 
         appInfoButton.setOnClickListener(view -> displayAppInfo());
 
-        instructionsButton = super.findViewById(R.id.instructionsButton);
+        Button instructionsButton = super.findViewById(R.id.instructionsButton);
         instructionsButton.setOnClickListener(v -> displayInstructions());
-
-
     }
 
     protected void displayAppInfo() {

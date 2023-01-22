@@ -1,15 +1,5 @@
 <resources>
-    <string name="app_name">Localify</string>
-    <string name="title_activity_main">MainActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="title_activity_maps">MapsActivity</string>
+    <string name="app_name" translatable="false">Localify</string>
 
     <!--    HelperActivity Strings-->
     <string name="instructions">Instructions</string>
@@ -23,9 +13,7 @@
     <string name="localifyGoal2">
         Whether it be restaurants or grocery stores that sell food/ingredients related to their culture, or thrift stores, providing budget options for clothing, Localify looks to help newly landed immigrants find important services and communal places in their area.
     </string>
-    <!--
-        As a newly landed immigrant, it can be hard to locate stores that serve food or sell ingredients specific to their culture.
--->
+
     <!--App Info strings-->
     <string name="dialogContinue">Continue</string>
     <string name="dialogTitle">User Information</string>
@@ -35,27 +23,18 @@
     <string name="nausher">Nausher Rao</string>
     <string name="ryan">Ryan Yee</string>
     <string name="actvitiyVersion">Activity Version: 1.0.01!</string>
-    <!--    <string name="authorNames">-->
-    <!--        -->
-    <!--        Gavan Singh-->
-
-    <!--        Nahor Yirgaalem-->
-
-    <!--        Nausher Rao-->
-
-    <!--        Ryan Yee-->
-    <!--    </string>-->
 
     <!--    Instructions Dialog Strings -->
     <string name='howToUse'>How To Use Localify</string>
     <string name="appInstructions">
-        To use Localify, begin by selecting your ethnicity. then you can go ahead and suck your dukes
+        To use Localify, begin by selecting your\nethnicity. Then you can go ahead and\nbrowse nearby locations that match your\nethnicity. To add a location to your favourites,\nselect the associated marker, and\ntap the plus button.
     </string>
-    <string name="title_activity_nav">NavActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_activity_toolbar">ToolbarActivity</string>
 
-
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="firstTimeTextLabel">Welcome! Please select your ethnicity/origin to get started!</string>
+    <string name="okContinue">Continue</string>
 </resources>

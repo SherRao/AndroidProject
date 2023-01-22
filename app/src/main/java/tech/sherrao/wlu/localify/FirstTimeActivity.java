@@ -30,7 +30,7 @@ public class FirstTimeActivity extends AppCompatActivity {
     private void checkIfFirstTime() {
         String originLang = prefs.getString(SHARED_PREFS_ORIGINS_KEY, null);
         if(originLang != null)
-            super.startActivity(new Intent(FirstTimeActivity.this, MainActivity.class));
+            super.startActivity(new Intent(FirstTimeActivity.this, ToolbarActivity.class));
     }
 
     private void updateComponents() {
@@ -45,7 +45,7 @@ public class FirstTimeActivity extends AppCompatActivity {
             editor.putString(SHARED_PREFS_ORIGINS_KEY, origin);
             editor.apply();
 
-            startActivity(new Intent(FirstTimeActivity.this, MainActivity.class));
+            startActivity(new Intent(FirstTimeActivity.this, ToolbarActivity.class));
         });
     }
 }

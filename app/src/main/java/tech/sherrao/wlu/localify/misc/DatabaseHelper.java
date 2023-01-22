@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -21,9 +20,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String LONG_COLUMN = "Longitude";
     public static final String RATING_COLUMN = "Rating";
 
-    private SQLiteDatabase readDb;
-    private SQLiteDatabase writeDb;
-    private Cursor cursor;
+    private final SQLiteDatabase readDb;
+    private final SQLiteDatabase writeDb;
 
     public DatabaseHelper(Context context) {
         super(context, TABLE_NAME, null, VERSION_NUM);
@@ -65,14 +63,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public List<Location> getStoredFavourites() {
-        List<Location> result = new ArrayList<>();
-        cursor = this.readDb.rawQuery("SELECT * FROM " + TABLE_NAME, null);
-        if(cursor.getColumnIndex(ID_COLUMN) == -1)
+    public ArrayList<Location> getStoredFavourites() {
+        ArrayList<Location> result = new ArrayList<>();
+        Cursor cursor = this.readDb.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        if (cursor.getColumnIndex(ID_COLUMN) == -1)
             return result;
 
         cursor.moveToFirst();
-        while(!cursor.isAfterLast()) {
+        while (!cursor.isAfterLast()) {
             String id = cursor.getString(cursor.getColumnIndex(ID_COLUMN));
             String name = cursor.getString(cursor.getColumnIndex(NAME_COLUMN));
             double latitude = cursor.getDouble(cursor.getColumnIndex(LAT_COLUMN));
@@ -88,20 +86,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result;
     }
 
-    public int getItemId(int position) {
-        if(cursor == null)
-            return -1;
-
-        cursor.moveToPosition(position);
-        int columnIndex = cursor.getColumnIndex(ID_COLUMN);
-        if(columnIndex < 0)
-            return -1;
-
-        return cursor.getInt(columnIndex);
-    }
-
     public void onDestroy() {
         Log.i(this.getClass().getSimpleName(), "Calling onDestroy()");
         super.close();
     }
+
 }
